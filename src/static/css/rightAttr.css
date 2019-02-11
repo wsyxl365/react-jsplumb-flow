@@ -1,0 +1,13 @@
+.container-body {
+    padding: 10px;
+}
+.item-container {
+    margin-bottom: 5px;
+}
+.item-title {
+    margin-bottom: 5px;
+    color: #787878;
+}
+.item-select {
+    width: 100%;
+}

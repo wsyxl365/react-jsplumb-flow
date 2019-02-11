@@ -1,0 +1,187 @@
+/*-----开始-----*/
+.startNodeImg {
+    /*margin-right: 8px;*/
+    background-color: rgb(120, 220, 107);
+    border: 2px solid #40AFFE;
+    border-radius: 50%;
+    /* box-shadow: 0 0 15px #4E4E4E; */
+    height: 35px;
+    width: 35px;
+    cursor: move;
+    line-height: 30px;
+    /* letter-spacing: 2px; */
+    background: linear-gradient(to right, rgb(120, 220, 107, 0.9), rgb(120, 220, 107, 0.8), rgb(120, 220, 107, 0.9));
+    background: -ms-linear-gradient(rgba(120, 220, 107, 0.9), rgba(120, 220, 107, 0.9));
+    z-index: 26;
+}
+/*-----结束-----*/
+.endNodeImg {
+    /*margin-right: 8px;*/
+    background-color: rgb(220, 107, 107);
+    border: 2px solid #40AFFE;
+    border-radius: 50%;
+    /* box-shadow: 0 0 15px #4E4E4E; */
+    height: 35px;
+    width: 35px;
+    cursor: move;
+    line-height: 30px;
+    /* letter-spacing: 2px; */
+    background: linear-gradient(to right, rgb(220, 107, 107, 0.9), rgb(220, 107, 107, 0.8), rgb(220, 107, 107, 0.9));
+    background: -ms-linear-gradient(rgba(220, 107, 107, 0.9), rgba(220, 107, 107, 0.9));
+    z-index: 26;
+}
+/*-----网关-----*/
+.gatewayNodeImg{
+    margin-top: 5px;
+    margin-left: 5px;
+    background-color: rgb(107, 171, 220);
+    border: 2px solid #40AFFE;
+    /* box-shadow: 0 0 15px #4E4E4E; */
+    height: 25px;
+    width: 25px;
+    cursor: move;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 1px;
+    background: linear-gradient(to right, rgb(107, 171, 220, 0.9), rgb(107, 171, 220, 0.8), rgb(107, 171, 220, 0.9));
+    background: -ms-linear-gradient(rgba(107, 171, 220, 0.9), rgba(107, 171, 220, 0.9));
+    z-index: 26;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+/*-----事件-----*/
+.eventNodeImg {
+    /*margin-right: 8px;*/
+    background-color: rgb(107, 171, 220);
+    border: 2px solid #40AFFE;
+    border-radius: 50%;
+    /* box-shadow: 0 0 15px #4E4E4E; */
+    height: 35px;
+    width: 35px;
+    cursor: move;
+    line-height: 30px;
+    /* letter-spacing: 2px; */
+    background: linear-gradient(to right, rgb(107, 171, 220, 0.9), rgb(107, 171, 220, 0.8), rgb(107, 171, 220, 0.9));
+    background: -ms-linear-gradient(rgba(107, 171, 220, 0.9), rgba(107, 171, 220, 0.9));
+    z-index: 26;
+}
+/*-----人工活动-----*/
+.aaNodeImg {
+    background-color: rgb(107, 171, 220);
+    border: 2px solid #40AFFE;
+    /* box-shadow: 0 0 15px #4E4E4E; */
+    width: 35px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: move;
+    line-height: 30px;
+    /* letter-spacing: 2px; */
+    background: linear-gradient(to right, rgb(107, 171, 220, 0.9), rgb(107, 171, 220, 0.8), rgb(107, 171, 220, 0.9));
+    background: -ms-linear-gradient(rgba(107, 171, 220, 0.9), rgba(107, 171, 220, 0.9));
+    z-index: 26;
+}
+/*-----自由活动-----*/
+.faNodeImg {
+    background-color: rgb(107, 171, 220);
+    border: 2px solid #40AFFE;
+    width: 35px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: move;
+    line-height: 30px;
+    background: linear-gradient(to right, rgb(107, 171, 220, 0.9), rgb(107, 171, 220, 0.8), rgb(107, 171, 220, 0.9));
+    background: -ms-linear-gradient(rgba(107, 171, 220, 0.9), rgba(107, 171, 220, 0.9));
+    z-index: 26;
+}
+/*-----内部子流程-----*/
+.icfNodeImg {
+    margin-top: 2px;
+    background-color: rgb(237, 239, 49);
+    border: 2px solid #40AFFE;
+    width: 35px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: move;
+    line-height: 30px;
+    background: linear-gradient(to right, rgb(237, 239, 49, 0.9), rgb(237, 239, 49, 0.8), rgb(237, 239, 49, 0.9));
+    background: -ms-linear-gradient(rgba(237, 239, 49, 0.9), rgba(237, 239, 49, 0.9));
+    z-index: 26;
+}
+/*-----外部子流程-----*/
+.ocfNodeImg {
+    margin-top: 2px;
+    background-color: rgb(237, 239, 49);
+    border: 2px solid #40AFFE;
+    width: 35px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: move;
+    line-height: 30px;
+    background: linear-gradient(to right, rgb(237, 239, 49, 0.9), rgb(237, 239, 49, 0.8), rgb(237, 239, 49, 0.9));
+    background: -ms-linear-gradient(rgba(237, 239, 49, 0.9), rgba(237, 239, 49, 0.9));
+    z-index: 26;
+}
+/*-----横向泳池、纵向泳池-----*/
+.pools-ori-node-img, .pools-dir-node-img {
+    border: 2px solid #40AFFE;
+    width: 35px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: move;
+    line-height: 30px;
+    background-color: rgb(237, 239, 49);
+    background: linear-gradient(to right, rgb(237, 239, 49, 0.9), rgb(237, 239, 49, 0.8), rgb(237, 239, 49, 0.9));
+    background: -ms-linear-gradient(rgba(237, 239, 49, 0.9), rgba(237, 239, 49, 0.9));
+    z-index: 26;
+}
+/*-----横向泳道、纵向泳道-----*/
+.pool-lane-ori-node-img, .pool-lane-dir-node-img {
+    border: 2px solid #40AFFE;
+    width: 35px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: move;
+    line-height: 30px;
+    background-color: rgb(237, 239, 49);
+    background: linear-gradient(to right, rgb(237, 239, 49, 0.9), rgb(237, 239, 49, 0.8), rgb(237, 239, 49, 0.9));
+    background: -ms-linear-gradient(rgba(237, 239, 49, 0.9), rgba(237, 239, 49, 0.9));
+    z-index: 26;
+}
+.contentTitle {
+    text-align: left;
+}
+.left-tool-node {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.left-tool-node:hover{
+    background-color: #20FFFF;
+}
+.img-icon {
+    position: absolute;
+    margin-top: 4px;
+    margin-left: -8px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.img-icon-exclusive {
+    position: absolute;
+    margin-top: 4px;
+    margin-left: -8px;
+}
+.img-icon-inclusive {
+    position: absolute;
+    margin-left: 3px;
+    margin-top: 3px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px  rgba(0, 0, 0, 0.65) solid;;
+}

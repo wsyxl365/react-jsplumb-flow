@@ -1,0 +1,6 @@
+/*
+** 这里重写一下ant的默认样式
+*/
+.ant-card-body{
+    padding:0 !important;
+}

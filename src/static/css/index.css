@@ -1,0 +1,481 @@
+body {
+  padding: 0;
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none !important;
+}
+
+/* 页头样式 */
+.title-container{
+  padding-right: 40px;
+  height: 40px;
+  background: #3b545d;
+}
+.logo-container {
+  line-height: 55px;
+  padding-left: 50px;
+}
+.logo-container span{
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 1px #cecece solid;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #fff;
+}
+/*页脚样式*/
+.title-container-footer {
+  line-height: 60px;
+  text-align: center;
+  color: #787878;
+}
+/* 设置连接线鼠滑样式 */
+.jtk-connector.jtk-hover {
+  /*cursor: pointer;*/
+}
+
+/* 设置端点鼠滑样式 */
+.jtk-endpoint.jtk-hover {
+  /*cursor: pointer;*/
+}
+#visobox {
+  width: 100%;
+  margin: 20px auto 0;
+}
+
+#operate {
+  z-index: 100;
+  /*padding: 20px;*/
+  /*border: 2px solid #ddd;*/
+  background-color: #eee;
+}
+.jtk-connector:hover {
+  cursor: pointer;
+}
+
+#operate .viso-item {
+  /*display: flex;*/
+  /*justify-content: center;*/
+  width: 100%;
+  /*height: 48px;*/
+  /*line-height: 35px;*/
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-top: none;
+  /*border-radius: 5px;*/
+  /*background-color: rgb(14, 158, 184);*/
+  font-size: 12px;
+  text-align: center;
+  color: #787878;
+}
+
+#operate .operate-item button {
+  width: 100%;
+}
+
+#operate .operate-item + .operate-item {
+  margin-top: 10px;
+}
+
+#diagramContainerReverse, #diagramContainer {
+  position: relative;
+  width: 2000px;
+  height: 2000px;
+  background-image: url(./../img/grid.jpeg);
+  background-repeat: repeat;
+  user-select: none;
+}
+.drawContainer {
+  position: relative;
+  width: 2000px;
+  height: 700px;
+  user-select: none;
+}
+
+/*设置Label的样式*/
+#diagramContainerReverse .jtk-overlay-label,
+#diagramContainer .jtk-overlay-label,
+.drawContainer .jtk-overlay-label
+{
+  background-color: white;
+  padding: 5px;
+  opacity: 0.9;
+  border: 1px solid #346789;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 4;
+}
+#diagramContainerReverse .viso-item,
+#diagramContainer .viso-item
+{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  color: #eee;
+  background-color: rgb(9, 116, 116);
+  /*cursor: pointer;*/
+}
+
+#diagramContainerReverse .viso-input,
+#diagramContainer .viso-input
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+  text-align: center;
+  color: #eee;
+  background: none;
+}
+
+#diagramContainerReverse .ant-select,
+#diagramContainer .ant-select
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0;
+  color: #eee;
+  text-align: center;
+  background: none;
+}
+#diagramContainerReverse .ant-select .ant-select-selection,
+#diagramContainer .ant-select .ant-select-selection
+{
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+}
+#diagramContainerReverse .ant-select .ant-select-selection__rendered,
+#diagramContainer .ant-select .ant-select-selection__rendered
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+#diagramContainerReverse .ant-select .ant-select-selection-selected-value,
+#diagramContainer .ant-select .ant-select-selection-selected-value
+{
+  float: none;
+  padding-right: 0;
+  font-size: 12px;
+}
+#diagramContainerReverse .ant-select .ant-select-arrow,
+#diagramContainer .ant-select .ant-select-arrow
+{
+  display: none;
+}
+
+
+#diagramContainerReverse .viso-close,
+#diagramContainer .viso-close
+{
+  position: absolute;
+  right: 0;
+  top: -20px;
+  z-index: 10;
+  display: none;
+  width: 15px;
+  height: 20px;
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "Segoe UI","Lucida Grande",Helvetica,Arial;
+  /*cursor: pointer;*/
+  color: #666;
+}
+
+#diagramContainerReverse .viso-close:hover,
+#diagramContainer .viso-close:hover
+{
+  color: #333;
+}
+
+#diagramContainerReverse .viso-start,
+#diagramContainer .viso-start
+{
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: orange;
+}
+#diagramContainerReverse .viso-start .viso-input,
+#diagramContainer .viso-start .viso-input
+{
+  background-color: orange;
+}
+
+#diagramContainerReverse .viso-end,
+#diagramContainer .viso-end
+{
+  width: 80px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: green;
+}
+#diagramContainerReverse .viso-end .viso-input,
+#diagramContainer .viso-end .viso-input
+{
+  background-color: green;
+}
+
+#diagramContainerReverse .viso-task,
+#diagramContainer .viso-task
+{
+  width: 100px;
+  height: 50px;
+  background-color: rgb(9, 116, 116);
+}
+#diagramContainerReverse .viso-task .viso-input,
+#diagramContainer .viso-task .viso-input
+{
+  background-color: rgb(9, 116, 116);
+}
+
+#diagramContainerReverse .viso-gateway-exclusive,
+#diagramContainer .viso-gateway-exclusive
+{
+  width: 48px;
+  height: 48px;
+  font-size: 0;
+  line-height: 0;
+  /*background: url(./images/gateway_exclusive.png) no-repeat center center;*/
+  background-size: 100% 100%;
+}
+
+#diagramContainerReverse .viso-gateway-parallel,
+#diagramContainer .viso-gateway-parallel
+{
+  width: 48px;
+  height: 48px;
+  font-size: 0;
+  line-height: 0;
+  /*background: url(./images/gateway_parallel.png) no-repeat center center;*/
+  background-size: 100% 100%;
+}
+
+#diagramContainerReverse .diagram-item.select,
+#diagramContainer .diagram-item.select
+{
+  background-color: rgb(20, 85, 85);
+}
+
+/*新建人工活动节点icon图标样式*/
+.viso-name-icon{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+/********画布开始节点*****/
+.viso-start-drop {
+  background: linear-gradient(to right, rgba(120, 220, 107, 0.9), rgba(120, 220, 107, 0.8), rgba(120, 220, 107, 0.9));
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  cursor: move;
+  box-shadow: rgb(0, 0, 0) 0px 0px 20px 0px;
+  border: 2px solid #40AFFE;
+  border-radius: 50%;
+  background: -ms-linear-gradient(rgba(120, 220, 107, 0.9), rgba(120, 220, 107, 0.9));
+  z-index: 26;
+}
+/********画布结束节点*****/
+.viso-end-drop {
+  background: linear-gradient(to right, rgb(220, 107, 107, 0.9), rgb(220, 107, 107, 0.8), rgb(220, 107, 107, 0.9));
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  cursor: move;
+  box-shadow: rgb(0, 0, 0) 0px 0px 20px 0px;
+  border: 2px solid #40AFFE;
+  border-radius: 50%;
+  background: -ms-linear-gradient(rgba(220, 107, 107, 0.9), rgba(220, 107, 107, 0.9));
+  z-index: 26;
+}
+/********画布网关节点*****/
+.viso-gateway-drop {
+  border: 2px solid #40AFFE;
+  /*box-shadow: 0 0 15px #4E4E4E;*/
+  height: 60px;
+  width: 60px;
+  cursor: move;
+  text-align: center;
+  box-shadow: rgb(0, 0, 0) 0px 0px 20px 0px;
+  background: linear-gradient(to right, rgb(107, 171, 220, 0.9), rgb(107, 171, 220, 0.8), rgb(107, 171, 220, 0.9));
+  background: -ms-linear-gradient(rgba(107, 171, 220, 0.9), rgba(107, 171, 220, 0.9));
+  z-index: 26;
+  -webkit-transform: rotate(-45deg) translateZ(0);
+  -moz-transform: rotate(-45deg) translateZ(0);
+  -ms-transform: rotate(-45deg) translateZ(0);
+  -o-transform: rotate(-45deg) translateZ(0);
+  transform: rotate(-45deg) translateZ(0);
+}
+/********画布事件节点*****/
+.viso-event-drop {
+  background: linear-gradient(to right, rgb(107, 171, 220, 0.9), rgb(107, 171, 220, 0.8), rgb(107, 171, 220, 0.9));
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  cursor: move;
+  box-shadow: rgb(0, 0, 0) 0px 0px 20px 0px;
+  border: 2px solid #40AFFE;
+  border-radius: 50%;
+  background: -ms-linear-gradient(rgba(107, 171, 220, 0.9), rgba(107, 171, 220, 0.9));
+  z-index: 26;
+}
+/********画布人工活动节点*****/
+.viso-assigned-activity-drop {
+  border: 2px solid #40AFFE;
+  /* box-shadow: 0 0 15px #4E4E4E; */
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  cursor: move;
+  text-align: center;
+  /* letter-spacing: 2px; */
+  background: linear-gradient(to right, rgb(107, 171, 220, 0.9), rgb(107, 171, 220, 0.8), rgb(107, 171, 220, 0.9));
+  background: -ms-linear-gradient(rgba(107, 171, 220, 0.9), rgba(107, 171, 220, 0.9));
+  z-index: 26;
+}
+/********画布自由活动节点*****/
+.viso-freedom-activity-drop {
+  border: 2px solid #40AFFE;
+  /* box-shadow: 0 0 15px #4E4E4E; */
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  cursor: move;
+  text-align: center;
+  /* letter-spacing: 2px; */
+  background: linear-gradient(to right, rgb(107, 171, 220, 0.9), rgb(107, 171, 220, 0.8), rgb(107, 171, 220, 0.9));
+  background: -ms-linear-gradient(rgba(107, 171, 220, 0.9), rgba(107, 171, 220, 0.9));
+  z-index: 26;
+}
+/********画布内部子流程节点*****/
+.viso-inner-child-flow-node-drop {
+  border: 2px solid #40AFFE;
+  /* box-shadow: 0 0 15px #4E4E4E; */
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  cursor: move;
+  text-align: center;
+  /* letter-spacing: 2px; */
+  background: linear-gradient(to right, rgb(237, 239, 49, 0.9), rgb(237, 239, 49, 0.8), rgb(237, 239, 49, 0.9));
+  background: -ms-linear-gradient(rgba(237, 239, 49, 0.9), rgba(237, 239, 49, 0.9));
+  z-index: 26;
+}
+/********画布外部子流程节点*****/
+.viso-outer-child-flow-node-drop {
+  border: 2px solid #40AFFE;
+  /* box-shadow: 0 0 15px #4E4E4E; */
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  cursor: move;
+  text-align: center;
+  /* letter-spacing: 2px; */
+  background: linear-gradient(to right, rgb(237, 239, 49, 0.9), rgb(237, 239, 49, 0.8), rgb(237, 239, 49, 0.9));
+  background: -ms-linear-gradient(rgba(237, 239, 49, 0.9), rgba(237, 239, 49, 0.9));
+  z-index: 26;
+}
+/********横向泳池、纵向泳池*****/
+.viso-pools-ori-drop, .viso-pools-dir-drop {
+  background-color: rgba(252, 235, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 0 15px #4E4E4E;
+  border: 2px solid black;
+  text-align: center;
+  cursor: move;
+  /*background: linear-gradient(to right, rgb(252, 235, 0, 0.9), rgb(252, 235, 0, 0.8), rgb(252, 235, 0, 0.9));*/
+}
+/********横向泳道*****/
+.viso-pool-lane-ori-drop {
+  background-color: rgba(252, 235, 0, 0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px #4E4E4E;
+  border: 2px solid black;
+  text-align: center;
+  cursor: move;
+}
+.align-item-name {
+  display: inline-block;
+  vertical-align: middle;
+}
+.align-item {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* 头部按钮工具组 */
+.header-btn-group .ant-btn{
+  margin-right: 8px;
+}
+.ant-modal {
+  top: 20px !important;
+}
+
+.selectFormModal .ant-modal-body {
+  height:800px;
+  overflow: auto;
+}
+.jtk-connector {
+  z-index: 3;
+}

@@ -1,0 +1,10 @@
+.container-all {
+    margin: 0 auto;
+}
+.tools-bar-left {
+    background: #eee;
+    border: 1px solid #333333;
+}
+.tools-bar-right {
+    overflow: scroll;
+}

@@ -1,0 +1,22 @@
+.right-property-container {
+  background: #fff;
+}
+.right-property-container .ant-tabs-bar {
+  text-align: center;
+}
+
+.global-property-form {
+  padding: 0 10px;
+}
+.global-property-form .ant-form-item {
+  margin-bottom: 15px;
+}
+
+/*pollyfill后台冲突样式*/
+.right-property-container .ant-tabs-content {
+  margin-top: 0 !important;
+}
+
+/*.right-property-container .ant-tabs-tabpane {*/
+  /*background: #fff;*/
+/*}*/

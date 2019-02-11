@@ -1,0 +1,31 @@
+.nodeflowmenu-container {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    /*background: red;*/
+    /*opacity: 0.5;*/
+    z-index: 999;
+}
+.menu-item-name-container {
+    box-sizing: content-box;
+    background: #fff;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
+.menu-item-name {
+    padding: 7px 10px;
+    width: 180px;
+}
+.menu-item-name:hover{
+    background: #7093E9;
+    cursor: pointer;
+}
+.menu-item-name-container .Icon {
+    margin-right: 10px;
+}
+.menu-item-line {
+    border-bottom: 1px solid #efefef;
+    width: 93.5%;
+    margin: 0 auto;
+}
